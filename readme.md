@@ -1,29 +1,32 @@
-﻿# Considerações
+# LinearMatTest - Considerações
 
--- Esse projeto foi dividio em 'TesteC#Linear' e SQL
+-- Esse projeto foi dividio nas pastas **'TesteC#Linear'**, **Tests**, e **SQL**
 
-## SQL: Contem os arquivos de criação de tabelas, inserção e leitura de dados.
+**SQL**: Contem os arquivos de criação de tabelas, inserção e leitura de dados.
 
-## TesteC#Linear: Contém a implementação dos algorítimos sugeridos.
+**TesteC#Linear**: Contém a implementação dos algorítimos sugeridos.
 
-## TesteC#Linear/Tests: Contém testes unitários para os algoritmos sugeridos.
+**Tests**: Contém testes unitários para os algoritmos sugeridos.
 
 # COMO EXECUTAR O SQL (MySql).
 
 ## Na pasta SQL
 
--- 1.Abrir o serviço do banco de dados e selecionar um Schema padrão. 
--- 2.Colar o script de criação. Devem ser geradas a tabela no Schema selecionado.
--- 3.Colar o script de leituras. Devem ser consultas as linhas correspondentes as leituras.
+1. Abrir o serviço do banco de dados e selecionar um Schema padrão. 
+
+2. Colar o script de criação. Devem ser geradas a tabela no Schema selecionado.
+
+3. Colar o script de leituras. Devem ser inseridos os dados de testes e exibido a consulta com as linhas correspondentes as leituras.
 
 # COMO EXECUTAR OS TESTES UNITÁRIOS
 
 Abrir a solução no Visual Studio, Executar testes do Projeto 'Tests'
 
--- WillChangeRepeatingValuesOnXOrYByRespectiveCharacter
--- WillPerformLineSweepOperation
+Teste referente ao exercício 1: **WillChangeRepeatingValuesOnXOrYByRespectiveCharacter**
 
-Testes devem executar com sucesso
+Teste referente ao exercício 2: **WillPerformLineSweepOperation**
+
+Os testes devem ser executados com sucesso
 
 ## MEU RACIOCÍNIO PARA TROCAR OS NUMEROS NO ARRAY POR CARACTERES
 
