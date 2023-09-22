@@ -18,7 +18,11 @@ LEFT JOIN Vendas V ON P.ProdutoID = V.ProdutoID
 
 GROUP BY P.Codigo;
 
-
+/*
+CodigoDoProduto,QuantidadeTotalVendida
+CAD01,0
+LAP01,2
+*/
 
 
 -- b) Quantidade total de compra de cada cliente (exibindo Nome do Cliente):
@@ -28,7 +32,11 @@ FROM Clientes C
 LEFT JOIN Vendas V ON C.ClienteID = V.ClienteID
 GROUP BY C.Nome;
 
-
+/*
+NomeDoCliente,QuantidadeTotalComprada
+"Cliente Não Comprador",0
+"Cliente Comprador",2
+*/
 
 -- c) Valor total vendido a cada dia:
 
@@ -36,6 +44,11 @@ SELECT DataVenda, SUM(PrecoTotal) AS ValorTotalVendido
 FROM Vendas
 GROUP BY DataVenda;
 
+/*
+DataVenda,ValorTotalVendido
+2023-09-22,12.00
+2023-09-23,12.00
+*/
 
 -- ) Quais Produtos não foram vendidos nunca (exibindo Código do Produto):
 
@@ -44,18 +57,28 @@ FROM Produtos P
 LEFT JOIN Vendas V ON P.ProdutoID = V.ProdutoID
 WHERE V.ProdutoID IS NULL;
 
-
-
+/*
+CodigoDoProduto
+CAD01
+*/
 
 -- e) Quais clientes nunca compraram (exibindo Nome do Cliente):
 
-SELECT c.Nome AS NomeCliente
-FROM Clientes c
-LEFT JOIN Vendas v ON c.ClienteID = v.ClienteID
-WHERE v.VendaID IS NULL;
+SELECT
+   ClienteID,
+   Nome
+FROM Clientes
+WHERE ClienteID NOT IN 
+	(
+		SELECT ClienteID
+        FROM Vendas 
+        GROUP BY ClienteID
+	);
 
-
-
+/*
+ClienteID,Nome
+1,"Cliente Não Comprador"
+*/
 
 -- f) Quantos produtos diferentes cada cliente comprou, independentemente de quantidade de venda, preço e data (exibindo Nome do Cliente):
 
@@ -63,3 +86,9 @@ SELECT c.Nome AS NomeCliente, COUNT(DISTINCT v.ProdutoID) AS ProdutosDiferentesC
 FROM Clientes c
 LEFT JOIN Vendas v ON c.ClienteID = v.ClienteID
 GROUP BY c.Nome;
+
+/*
+NomeCliente,ProdutosDiferentesComprados
+"Cliente Comprador",1
+"Cliente Não Comprador",0
+*/
