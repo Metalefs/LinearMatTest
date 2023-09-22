@@ -14,7 +14,7 @@
 
 1. Abrir o serviço do banco de dados e selecionar um Schema padrão. 
 
-2. Colar o script de criação. Devem ser geradas a tabela no Schema selecionado.
+2. Colar o script de criação. Devem ser criadas as tabela no Schema selecionado.
 
 3. Colar o script de leituras. Devem ser inseridos os dados de testes e exibido a consulta com as linhas correspondentes as leituras.
 
