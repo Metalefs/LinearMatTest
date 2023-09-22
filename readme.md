@@ -1,12 +1,12 @@
 ﻿# Considerações
 
--- Esse projeto foi dividio em 'TesteC#Linear', Tests, e SQL
+-- Esse projeto foi dividio em 'TesteC#Linear' e SQL
 
 ## SQL: Contem os arquivos de criação de tabelas, inserção e leitura de dados.
 
 ## TesteC#Linear: Contém a implementação dos algorítimos sugeridos.
 
-## Tests: Contém testes unitários para os algoritmos sugeridos.
+## TesteC#Linear/Tests: Contém testes unitários para os algoritmos sugeridos.
 
 # COMO EXECUTAR O SQL (MySql).
 
